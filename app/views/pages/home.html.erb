@@ -1,6 +1,12 @@
-<p>このページは仮のトップページです。</p>
+
+
+<h1>InstaCloneApp</h1>
 
 <% if user_signed_in? %>
 <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
 <% end %>
-<%= link_to "仮のボタンです", "#", class: "btn btn-primary" %>
+<h2><%= link_to "サインイン", user_session_path %></h2>
+<h2><%= link_to "登録する",new_user_registration_path %></h2>
+
+
+

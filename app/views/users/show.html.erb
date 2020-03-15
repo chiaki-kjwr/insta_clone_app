@@ -2,6 +2,9 @@
   <div class="row">
     <div class="col-md-4 text-center">
       <%= image_tag avatar_url(@user), class: "round-img" %>
+      
+      <%#img src=<%= @user.profile_photo %class = "icon_image"%>
+      
     </div>
     <div class="col-md-8">
       <div class="row">
@@ -31,18 +34,23 @@
       </div>
       <% if @user == current_user %>
         <div class="row">
-            <p>
-              <%= @user.email %><br>
+           <ul>
+             
+          <li><%= @user.email %>
             </p>
+            </li>
+            
+            <li>
             <p>
-              <%= @user.profile %><br>
+              <%= @user.profile%>
             </p>
+            </li>
+            
+            <li>
             <p>
-              <%= @user.web %><br>
-            </p>
-      
-          
-          
+              <%= @user.web %>
+              </p>
+              </li>
         </div>
       <% end %>
     </div>

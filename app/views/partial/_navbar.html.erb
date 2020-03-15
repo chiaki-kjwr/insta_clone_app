@@ -6,13 +6,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-md-auto align-items-center">
-        <li>
-         <%= link_to "投稿", new_post_path, class: "btn btn-primary" %>
-        </li>
+        
         <li>
           <% if user_signed_in? %>
           <%= link_to "", user_path(current_user), class: "nav-link commonNavIcon profile-icon" %>
+            <% end %>
+        <li>
+           <% if user_signed_in? %>
+           <%= link_to "トップページ", root_path, class: "btn btn-primary"%>
         <% end %>
+        </li>
+        
         
         </li>
       </ul>
