@@ -31,9 +31,18 @@
       </div>
       <% if @user == current_user %>
         <div class="row">
-          <p>
-            <%= @user.email %>
-          </p>
+            <p>
+              <%= @user.email %><br>
+            </p>
+            <p>
+              <%= @user.profile %><br>
+            </p>
+            <p>
+              <%= @user.web %><br>
+            </p>
+      
+          
+          
         </div>
       <% end %>
     </div>
