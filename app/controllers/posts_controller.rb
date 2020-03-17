@@ -2,12 +2,13 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: %i(show destroy)
   
+  
   def index
     @posts = Post.all.includes(:photos, :user).order('created_at DESC')
   end
   
-  
   def show
+    @post = Post.find_by(id: params[:id])
   end
   
   def new
@@ -19,7 +20,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.photos.present?
       @post.save
-      redirect_to root_path
+      redirect_to "/posts"
       flash[:notice] = "投稿が保存されました"
     else
       redirect_to root_path

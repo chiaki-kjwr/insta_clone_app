@@ -1,12 +1,16 @@
+<% provide(:title, "TopPage") %>
 
+　<div class = "image"></div>
+<%= image_tag 'home_image.jpg', :size =>'700x600' %>
+</div>
 
-<h1>InstaCloneApp</h1>
-
+ <div class = "right">
 <% if user_signed_in? %>
-<%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
+<%= link_to "サインアウト", destroy_user_session_path, method: :delete,class: "btn btn-primary"%>
 <% end %>
-<h2><%= link_to "サインイン", user_session_path %></h2>
-<h2><%= link_to "登録する",new_user_registration_path %></h2>
 
+<%= link_to "サインイン",user_session_path,class: "btn btn-primary" %>
+<%= link_to "登録する",new_user_registration_path,class: "btn btn-primary" %>
+</div>
 
 

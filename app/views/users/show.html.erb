@@ -1,7 +1,7 @@
 <div class="profile-wrap">
   <div class="row">
     <div class="col-md-4 text-center">
-      <%= image_tag avatar_url(@user), class: "round-img" %>
+      <%#= image_tag avatar_url(@user), class: "round-img" %>
       
       <%#img src=<%= @user.profile_photo %class = "icon_image"%>
       
@@ -27,6 +27,7 @@
               <div class="list-group text-center">
                 <%= link_to "サインアウト", destroy_user_session_path, method: :delete, class: "list-group-item list-group-item-action" %>
                 <%= link_to "キャンセル", "#", class: "list-group-item list-group-item-action", "data-dismiss": "modal" %>
+                 <%= link_to "アカウント削除", user_path, method: :delete,class: "list-group-item list-group-item-action" %>
               </div>
             </div>
           </div>
