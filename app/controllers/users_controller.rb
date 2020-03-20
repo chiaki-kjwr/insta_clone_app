@@ -9,19 +9,19 @@ class UsersController < ApplicationController
     redirect_to("/")
    end
    
-    def following
+   def following
     @title = "Following"
     @user  = User.find(params[:id])
     @users = @user.following
     render 'show_follow'
-    end
+   end
 
-  def followers
+   def followers
     @title = "Followers"
     @user  = User.find(params[:id])
     @users = @user.followers
     render 'show_follow'
-  end
+   end
    
    
 end

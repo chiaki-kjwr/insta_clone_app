@@ -23,7 +23,7 @@
     <h3><%= @title %></h3>
     <% if @users.any? %>
       <ul class="users follow">
-        <%= render @users %>
+        <%#= render partial: "@users", locals: { users: @users }  %>
       </ul>
       
     <% end %>
