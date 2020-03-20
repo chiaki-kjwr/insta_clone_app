@@ -3,7 +3,7 @@
 <div class="row">
 <% @posts.each do |post| %>
 
-  <div class="col-md-3  mx-auto">
+  <div class="col-md-4  mx-auto">
     <div class="card-wrap">
       <div class="card">
         <div class="card-header align-items-center d-flex">
@@ -52,7 +52,7 @@
             <div id="comment-post-<%= post.id.to_s %>">
               <%= render 'comment_list', { post: post } %>
             </div>
-            <%= link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post),
+            <%= link_to time_ago_in_words(post.created_at).upcase + "ago", post_path(post),
               class: "light-color post-time no-text-decoration" %>
            
             

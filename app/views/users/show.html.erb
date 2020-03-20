@@ -7,7 +7,9 @@
       
     </div>
     <div class="col-md-8">
-          <%= render 'follow_form' %>
+      　<% if @user != current_user %>
+          <%= render 'follow_form'%>
+          <% end %>
       <div class="row">
         <h1><%= @user.name %></h1>
         
