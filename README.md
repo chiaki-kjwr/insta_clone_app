@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+★自分が苦労した点
 
-Things you may want to cover:
+①アプリケーションの設計方法：
+設計の部分が一番難しかったです。
+rails tutorialで学んだことも、実際にアプリケーション開発をしようとすると手が動かず、再度
+復習しながらの開発になってしまい、どのようなコントローラを作り、モデル間でどう関連性を持たせるか、ということを考え実装するのに非常に時間がかかりました。
+初めのうちは実装したい機能について、「MVCのうち、どこに記載すればいいのか」というところで躓くことも多かったです。
 
-* Ruby version
+②データの取り扱い：
+・また、テーブルに追加したカラムを安易に削除した結果、エラーが起こりかなり時間がかかり、
+リソースの取り扱いには苦労しました。
 
-* System dependencies
+③エラーの多発：
+link_toやredirect_toのパス指定が誤っていたことに起因するエラーが一番多かったです。
 
-* Configuration
+★学んだ点
+①Rails において、便利なgemが豊富であり、gemをうまく導入しながら効率的に開発することが必要だと感じました。
+②モデル間の関連付けについては、dependent: :destroyやネスト構造を使えば比較的簡単に実装できると学びました。
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+★自慢したい・相談したい点
+相談したい点としては、テストを書くタイミングです。
+今回はテストを一切書けなかったのですが、現場でもRails tutorial と同様、１つの機能（例えばユーザー登録機能等）を実装するタイミングで
+テストを書いているのでしょうか。
+（全ての機能を実装後、まとめて最後にテストをする、ということはやはりないのでしょうか）
