@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :posts, dependent: :destroy
   has_many :likes
   has_many :comments
@@ -18,8 +16,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
-         validates :name, presence: true, length: { maximum: 20 }
-         validates :username, presence: true, length: { maximum: 20 }
+  validates :name, presence: true, length: { maximum: 20 }
+  validates :username, presence: true, length: { maximum: 20 }
   
          
   def update_without_current_password(params, *options)
